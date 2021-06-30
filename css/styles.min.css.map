@@ -1,0 +1,34 @@
+{
+	"version": 3,
+	"file": "styles.min.css",
+	"sources": [
+		"../sass/main.scss",
+		"../sass/Abstracts/_variables.scss",
+		"../sass/Base/_base.scss",
+		"../sass/Base/_typography.scss",
+		"../sass/Components/_story.scss",
+		"../sass/Components/_gallery.scss",
+		"../sass/Components/_homes.scss",
+		"../sass/Layout/_sidebar.scss",
+		"../sass/Layout/_header.scss",
+		"../sass/Layout/_footer.scss",
+		"../sass/Pages/_home.scss",
+		"../sass/_realtors.scss"
+	],
+	"sourcesContent": [
+		"@import \"Abstracts/variables\";\r\n\r\n@import \"Base/base\";\r\n@import \"Base/typography\";\r\n\r\n@import \"Components/story\";\r\n@import \"Components/gallery\";\r\n@import \"Components/homes\";\r\n\r\n@import \"Layout/sidebar\";\r\n@import \"Layout/header\";\r\n@import \"Layout/footer\";\r\n\r\n@import \"Pages/home\";\r\n\r\n@import \"realtors\";\r\n",
+		"// COLOR VARIABLES\r\n$color-primary: #c69963;\r\n$color-primary-dark: #B28451;\r\n\r\n$color-secondary: #101d2c;\r\n\r\n$color-grey-light-1: #f9f7f6;\r\n$color-grey-light-2: #aaa;\r\n\r\n$color-grey-dark-1: #54483A;\r\n$color-grey-dark-2: #6D5D4B;\r\n\r\n// FONT VARIABLES\r\n$font-primary: 'Nunito', sans-serif;\r\n$font-display: 'Josefin Sans', sans-serif;\r\n",
+		"*,\r\n*::after,\r\n*::before {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n    scroll-behavior: smooth;\r\n    font-size: 62.5%;\r\n}\r\n\r\nbody {\r\n    font-family: $font-primary;\r\n    line-height: 1.7rem;\r\n    color: $color-grey-dark-2;\r\n    font-weight: 300;\r\n}\r\n\r\n::selection {\r\n    background: #6D5D4B;\r\n    color: #f9f7f6;\r\n}\r\n",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		""
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,CAAC,CACD,CAAC,AAAA,OAAO,CACR,CAAC,AAAA,QAAQ,AAAC,CACN,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CACzB,AAED,AAAA,IAAI,AAAC,CACD,eAAe,CAAE,MAAM,CACvB,SAAS,CAAE,KAAK,CACnB,AAED,AAAA,IAAI,AAAC,CACD,WAAW,CDDA,QAAQ,CAAE,UAAU,CCE/B,WAAW,CAAE,MAAM,CACnB,KAAK,CDNW,OAAO,CCOvB,WAAW,CAAE,GAAG,CACnB,AAED,AAAA,WAAW,AAAC,CACR,UAAU,CAAE,OAAO,CACnB,KAAK,CAAE,OAAO,CACjB"
+}

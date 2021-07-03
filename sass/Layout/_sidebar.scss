@@ -1,0 +1,45 @@
+.sidebar {
+    background: $color-primary;
+
+    grid-area: header-start / sidebar-start / footer-end / sidebar-end;
+
+    display: flex;
+    justify-content: center;
+
+    @include responsive(tab-land) {
+        grid-area: sidebar-start / full-start / sidebar-end / full-end;
+        justify-content: flex-end;
+    }
+
+    .nav-btn {
+        width: 4rem;
+        height: 0.2rem;
+        background: #fff;
+        position: relative;
+        top: 4rem;
+
+        @include responsive(tab-land) {
+            top: 3rem;
+            right: 3rem;
+        }
+
+        border: none;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            background: inherit;
+            width: 4rem;
+            height: 0.2rem;
+        }
+
+        &::before {
+            transform: translateY(-1rem);
+        }
+
+        &::after {
+            transform: translateY(0.9rem);
+        }
+    }
+}

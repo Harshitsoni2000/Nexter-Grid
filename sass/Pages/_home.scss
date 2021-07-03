@@ -1,0 +1,59 @@
+.container {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-rows: [header-start] 80vh
+                        [header-end features-start] min-content
+                        [features-end story-start] 40vw
+                        [story-end homes-start] min-content
+                        [homes-end gallery-start] min-content
+                        [gallery-end footer-start] min-content [footer-end];
+    // lets take max-width: 1400px, so 1200/16=75px;
+    grid-template-columns: [sidebar-start] 8rem
+                           [sidebar-end full-start] 1fr
+                           [center-start] repeat(16, [col-start] minmax(min-content, 8.75rem) [col-end]) [center-end]
+                           1fr [full-end];
+
+    @include responsive(tab-land) {
+
+        grid-template-rows: [sidebar-start] 6rem
+                            [sidebar-end header-start] 80vh
+                            [header-end features-start] min-content
+                            [features-end story-start] 40vw
+                            [story-end homes-start] min-content
+                            [homes-end gallery-start] min-content
+                            [gallery-end footer-start] min-content [footer-end];
+
+        grid-template-columns: [full-start] 1fr
+                               [center-start] repeat(16, [col-start] minmax(min-content, 8.75rem) [col-end]) [center-end]
+                               1fr [full-end];;
+    }
+
+    @include responsive(tab-port) {
+
+        grid-template-rows: [sidebar-start] 6rem
+                            [sidebar-end header-start] 95vh
+                            [header-end realtors-start] min-content
+                            [realtors-end features-start] min-content
+                            [features-end story-start-1] min-content
+                            [story-end-1 story-start-2] 40vh
+                            [story-end-2 homes-start] min-content
+                            [homes-end gallery-start] min-content
+                            [gallery-end footer-start] min-content [footer-end];
+
+        grid-template-columns:  [full-start] 1fr
+                                [center-start] repeat(16, [col-start] minmax(min-content, 8.75rem) [col-end]) [center-end]
+                                1fr [full-end];;
+
+    }
+
+    .features {
+        grid-area: features-start / col-start 2 / features-end / span 14;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 5rem;
+
+        margin: 15rem 0;
+    }
+}

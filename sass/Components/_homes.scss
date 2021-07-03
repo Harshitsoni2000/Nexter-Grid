@@ -1,0 +1,9 @@
+.homes {
+    grid-area: homes-start / col-start 2 / homes-end / col-end 15;
+
+    padding: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 6rem;
+    perspective: 80rem;
+}

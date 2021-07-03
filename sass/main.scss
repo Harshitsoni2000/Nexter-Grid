@@ -1,8 +1,12 @@
 @import "Abstracts/variables";
+@import "Abstracts/mixins";
 
 @import "Base/base";
 @import "Base/typography";
 
+@import "Components/card";
+@import "Components/feature";
+@import "Components/realtors";
 @import "Components/story";
 @import "Components/gallery";
 @import "Components/homes";
@@ -12,5 +16,3 @@
 @import "Layout/footer";
 
 @import "Pages/home";
-
-@import "realtors";

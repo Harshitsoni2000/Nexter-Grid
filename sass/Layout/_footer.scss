@@ -1,0 +1,38 @@
+.footer {
+    background: $color-secondary;
+    grid-area: footer-start / full-start / footer-end / full-end;
+    padding: 10rem 6rem;
+
+    display: grid;
+    grid-template: auto / repeat(auto-fit, minmax(15rem, 1fr));
+    text-align: center;
+    grid-gap: 3rem;
+    place-content: center;
+    position: relative;
+
+    &__link:link,
+    &__link:visited {
+        color: $color-grey-light-1;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 1.5rem;
+        text-transform: uppercase;
+        font-family: $font-display;
+        align-self: center;
+        transition: all 0.25s;
+
+        &:hover {
+            background: rgba(#fff, 0.5);
+            transform: translateY(-1rem);
+        }
+    }
+
+    &__para {
+        color: $color-grey-light-1;
+
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

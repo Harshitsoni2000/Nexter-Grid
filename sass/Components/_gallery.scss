@@ -1,0 +1,76 @@
+.gallery {
+    background: $color-grey-light-1;
+    background-size: contain;
+    padding: 2rem;
+
+    grid-area: gallery-start / full-start / gallery-end / full-end;
+
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(8, 1fr);
+    grid-gap: 1rem;
+
+    & > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .gal-1 {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    .gal-2 {
+        grid-area: 1 / 3 / 4 / 6;
+    }
+
+    .gal-3 {
+        grid-area: 1 / 6 / 3 / 7;
+    }
+
+    .gal-4 {
+        grid-area: 1 / 7 / 3 / 9;
+    }
+
+    .gal-5 {
+        grid-area: 3 / 1 / 6 / 3;
+    }
+
+    .gal-6 {
+        grid-area: 4 / 3 / 6 / 5;
+    }
+
+    .gal-7 {
+        grid-area: 4 / 5 / 5 / 6;
+        height: auto;
+    }
+
+    .gal-8 {
+        grid-area: 3 / 6 / 5 / 8;
+    }
+
+    .gal-9 {
+        grid-area: 3 / 8 / 6 / 9;
+    }
+
+    .gal-10 {
+        grid-area: 6 / 1 / -1 / 2;
+    }
+
+    .gal-11 {
+        grid-area: 6 / 2 / -1 / 4;
+    }
+
+    .gal-12 {
+        grid-area: 6 / 4 / -1 / 5;
+    }
+
+    .gal-13 {
+        grid-area: 5 / 5 / -1 / 8;
+    }
+
+    .gal-14 {
+        grid-area: 6 / 8 / -1 / -1;
+    }
+
+}

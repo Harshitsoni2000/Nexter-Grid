@@ -1,0 +1,77 @@
+.story {
+    &__picture {
+        grid-area: story-start / full-start / story-end / col-end 8;
+
+        @include responsive(tab-port) {
+            grid-area: story-start-2 / full-start / story-end-2 /full-end;
+            overflow: hidden;
+        }
+
+        display: grid;
+        grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+        background: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary-dark, 0.5)), url("../img/webp/back.webp");
+        background-size: cover;
+
+        .picture-1 {
+            grid-area: 2 / 2 / 6 / 6;
+
+            @include responsive(tab-port) {
+                grid-area: 3 / 2 / 5 / 6;
+            }
+
+            object-fit: cover;
+            width: 80%;
+            place-self: center;
+            box-shadow: 0.3rem 2rem 3rem rgba(#000, 0.5);
+            border-radius: 3px;
+        }
+
+        .picture-2 {
+            z-index: 1;
+            object-fit: cover;
+            grid-area: 4 / 4 / 6 / -1;
+
+            @include responsive(tab-port) {
+                grid-area: 4 / 4 / 5 / 6;
+            }
+
+            width: 115%;
+            box-shadow: 0.3rem 2rem 3rem rgba(#000, 0.5);
+            border-radius: 3px;
+        }
+    }
+
+    &__content {
+        background: $color-grey-light-1;
+        grid-area: story-start / col-start 9 / story-end / full-end;
+
+        @include responsive(tab-port) {
+            grid-area: story-start-1 / full-start / story-end-1 /full-end;
+            padding: 4rem 0;
+        }
+
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-columns: 1fr minmax(min-content, 75%) 1fr;
+        align-content: center;
+
+        .heading-3 {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .heading-2 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .story__text {
+            grid-area: 3 / 2 / 4 / 3;
+            margin: 1rem 0 4rem;
+        }
+
+        .btn {
+            grid-area: 4 / 2 / 5 / 3;
+            border-radius: 3px;
+            justify-self: start;
+        }
+    }
+}

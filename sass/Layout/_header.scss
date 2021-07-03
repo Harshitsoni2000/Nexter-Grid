@@ -1,0 +1,65 @@
+.header {
+    background: linear-gradient(rgba($color-secondary, 0.9), rgba($color-secondary, 0.7s)), url("../img/webp/hero.webp");
+    background-size: cover;
+    padding: 4rem 2rem;
+    grid-area: header-start / full-start / header-end / col-end 11;
+
+    @include responsive(tab-port) {
+        grid-area: header-start / full-start / header-end / full-end;
+    }
+    display: grid;
+    grid-template-rows: 1fr repeat(2, min-content) 1fr repeat(2, min-content);
+    grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+    place-items: center start;
+    grid-row-gap: 2rem;
+
+    & > * {
+        grid-column: 2 / 3;
+    }
+
+    &__logo {
+        height: 3rem;
+        place-self: start center;
+    }
+
+    .btn {
+        place-self: start;
+    }
+
+    &__seenon {
+        grid-column: 2 / 3;
+        color: $color-grey-light-1;
+        place-self: stretch;
+        font-size: 1.4rem;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        grid-column-gap: 2rem;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            height: 0.1rem;
+            width: 100%;
+            background: $color-grey-light-1;
+        }
+    }
+
+
+
+    &__logos {
+        filter: brightness(70%);
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min-content, max-content));
+        grid-column-gap: 3rem;
+        place-self: start center;
+
+        & > * {
+            max-height: 2.7rem;
+            max-width: 100%;
+        }
+    }
+}

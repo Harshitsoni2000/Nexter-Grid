@@ -9,16 +9,29 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+
+    @include responsive(lg-desktop) {
+        font-size: 70%;
+    }
+    @include responsive(tab-land) {
+        font-size: 55%;
+    }
+    @include responsive(tab-port) {
+        font-size: 50%;
+    }
+    @include responsive(mobile) {
+        font-size: 45%;
+    }
 }
 
 body {
     font-family: $font-primary;
-    line-height: 1.7rem;
+    line-height: 1.7;
     color: $color-grey-dark-2;
     font-weight: 300;
 }
 
 ::selection {
     background: #6D5D4B;
-    color: #f9f7f6;
+    color: #fff;
 }
